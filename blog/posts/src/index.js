@@ -15,9 +15,9 @@ const EVENTS_URL = process.env.EVENTS_URL || "localhost";
 
 console.log(EVENTS_URL);
 
-//app.get("/posts", (req, res) => {
-//  res.send(posts);
-//});
+app.get("/posts", (req, res) => {
+  res.send("posts test");
+});
 
 app.post("/posts/create", async (req, res) => {
   const id = randomBytes(4).toString("hex");
